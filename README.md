@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Trivia Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a small Trivia game built with React that fetches questions and answers from the Open Trivia API and allows users to answer the questions.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started, you can clone this repository and install the dependencies:
 
-### `yarn start`
+```bash
+git clone https://github.com/YoussefMohamed2k19/trivia-game.git
+cd trivia-game
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+After that, you can start the development server:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm start
+```
 
-### `yarn test`
+This will start the app at [http://localhost:3000](http://localhost:3000) in your browser.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Then, in a new terminal window, start Cypress:
 
-### `yarn build`
+```
+npm run cypress:open
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This will open the Cypress test runner, where you can select the `game.cy.js` test and run it.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To play the game, simply enter your answer in the text field and click the "Submit" button. The app will check your answer and show you whether you were correct or incorrect.
 
-### `yarn eject`
+After you submit your answer, the app will wait 30 seconds and then fetch a new question.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Code Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The code is organized into several files and directories:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `src/App.js`: The main component that renders the Trivia component and provides some basic styling
+- `src/components/Header/Header.js`: A simple component that displays the app title
+- `src/pages/Trivia/Trivia.js`: The Trivia component that contains the game logic and renders the question, answer input, and result messages
+- `src/pages/Trivia/Trivia.module.css`: The stylesheet for the Trivia component
+- `src/index.js`: The entry point for the app
+- `cypress/e2e/game.cy.js`: The file of testing the game flow
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Dependencies
 
-## Learn More
+The app uses the following dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `axios`: A library for making HTTP requests
+- `react`: A library for building user interfaces
+- `react-dom`: A package that provides DOM-specific methods for React
+- `react-scripts`: A set of scripts and configuration used by Create React App
+- `cypress`: End-to-end testing framework for web applications
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+If you find any issues or have suggestions for improving the game, feel free to open an issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the LICENSE file for details.
