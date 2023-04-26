@@ -2,6 +2,10 @@
 
 This is a small Trivia game built with React that fetches questions and answers from the Open Trivia API and allows users to answer the questions.
 
+## Demo Link
+
+ [https://trivia-game-rust.vercel.app/](https://trivia-game-rust.vercel.app/)
+
 ## Getting Started
 
 To get started, you can clone this repository and install the dependencies:
